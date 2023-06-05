@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap');
+
+
+  //fonts
+  $heading: "Arapey", serif;
+  $body: "Maitree", serif;
+  $menu: "Work Sans", sans-serif;
+
+  //colors
+ 
+  :root {
+
+    $purple:#7664ff;
+    $light-purple:#bdadfc;
+    $dark-purple:#77298c;
+    $pink: #f1ccfa;
+    $blue: #0c145e;
+    $light-gray: #eaebf5;
+    $dark-gray: #b2b8e8;
+    
+    
+
+
+  $rose: #f1468e;
+  $light-rose: #df90bd;
+  $bg: rgb(255, 201, 169);
+  $white: #ffffff;
+  $black: #000000;
+
+  
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+
+}
+
+html {
+  scroll-behavior: smooth;
+  
+
+}
+
+body {
+ background-color: #fce0f6;
+ color:#1f0018 ;
+  overflow-x: hidden;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.width{
+  width: min(90%, 1300px);
+  margin-inline: auto;
+}

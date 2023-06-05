@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Suspense, lazy, useState, useEffect } from "react";
+import "./SASS/styles.scss";
+
+import Layout from "./MainComponents/Layout";
+import MainLoader from "./MainComponents/MainLoader";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+//pages
+const LazyHomePage = lazy(() => import("./Pages/HomePage/HomePage"));
+
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: (
+          <Suspense fallback={<MainLoader />}>
+            <LazyHomePage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "about",
+      },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <RouterProvider router={router} fallbackElement={<MainLoader />} />;
 }
 
 export default App;
