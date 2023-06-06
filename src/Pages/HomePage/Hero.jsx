@@ -189,7 +189,8 @@ function Hero() {
       {/**
        * //!overlay sections
        */}
-     
+      {/**
+        * 
       <div className="overlay-fixed z-50  fixed h-screen w-full inset-0 pointer-events-none">
         <div className="overlay-wrapper-relative relative h-full w-full">
           <div className="overlay-left fixed left-0 top-0 h-full w-1/2 bg-pink-200"></div>
@@ -197,7 +198,7 @@ function Hero() {
           {/**
            * //!overlay text
            *
-           */}
+           * /}
           <h2 className="absolute  left-1/2 top-1/2 -translate-x-full -translate-y-full pr-2 text-left text-2xl font-bold tracking-widest">
             OMATECH
           </h2>
@@ -212,7 +213,7 @@ function Hero() {
           </h2>
         </div>
       </div>
-        
+        */}
       {/**
        * //!hero content
        */}

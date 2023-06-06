@@ -55,11 +55,11 @@ function WhyUs() {
         <div className="feature feature-1 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
           <div
             ref={pushRef}
-            className="img-wrapper flex h-auto w-1/2 md:w-full md:justify-center"
+            className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center"
           >
             <div className="feature-img-container sm:wfull w-4/6 md:w-4/6">
               <img
-                className="aspect-square h-full object-cover"
+                className="aspect-square plain-blob h-full object-cover"
                 src="../assets/images/5.jpg"
                 alt="feature"
               />
@@ -80,11 +80,11 @@ function WhyUs() {
         <div className="feature feature-1 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
           <div
             ref={pushRef}
-            className="img-wrapper flex h-auto w-1/2 md:w-full md:justify-center"
+            className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center"
           >
-            <div className="feature-img-container sm:wfull w-4/6 md:w-4/6">
+            <div className="feature-img-container  sm:wfull w-4/6 md:w-4/6">
               <img
-                className="aspect-square h-full object-cover"
+                className=" aspect-square plain-blob h-full object-cover"
                 src="../assets/images/6.jpg"
                 alt="feature"
               />
@@ -105,11 +105,11 @@ function WhyUs() {
         <div className="feature feature-1 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
           <div
             ref={pushRef}
-            className="img-wrapper flex h-auto w-1/2 md:w-full md:justify-center"
+            className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center"
           >
             <div className="feature-img-container sm:wfull w-4/6 md:w-4/6">
               <img
-                className="aspect-square h-full object-cover"
+                className="aspect-square plain-blob h-full object-cover"
                 src="../assets/images/7.jpg"
                 alt="feature"
               />
@@ -130,11 +130,11 @@ function WhyUs() {
         <div className="feature feature-1 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
           <div
             ref={pushRef}
-            className="img-wrapper flex h-auto w-1/2 md:w-full md:justify-center"
+            className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center"
           >
             <div className="feature-img-container sm:wfull w-4/6 md:w-4/6">
               <img
-                className="aspect-square h-full object-cover"
+                className="aspect-square plain-blob h-full object-cover"
                 src="../assets/images/11.jpg"
                 alt="feature"
               />
