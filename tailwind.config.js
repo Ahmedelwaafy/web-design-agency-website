@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["Rubik", "sans-serif"],
-        "sub-heading": ["Oswald", "sans-serif"],
-        body: ["Marcellus", "serif"],
+        heading: ["Ultra", "serif"],
+        "sub-heading": ["Yeseva One", "cursive"],
+        body: ["Rubik", "sans-serif"],
         Cursive: ["Tenor Sans", "sans-serif"],
       },
 

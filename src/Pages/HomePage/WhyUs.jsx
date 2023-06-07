@@ -48,7 +48,7 @@ function WhyUs() {
         WhyUs
       </h2>
 
-      <div className="features flex w-full flex-col justify-center gap-12 md:items-center">
+      <div className="features flex w-full flex-col justify-center gap-24 md:items-center">
         {/**
          * //!feature-1
          */}
@@ -59,93 +59,105 @@ function WhyUs() {
           >
             <div className="feature-img-container sm:wfull w-4/6 md:w-4/6">
               <img
-                className="aspect-square plain-blob h-full object-cover"
+                className="plain-blob aspect-square h-full object-cover"
                 src="../assets/images/5.jpg"
                 alt="feature"
               />
             </div>
           </div>
 
-          <div className="text-wrapper h-auto w-1/2 md:w-full md:text-center">
-            <h3 className="text-2xl font-semibold">Lorem ipsum dolor sit.</h3>
-            <h4 className="my-6 text-lg">
+          <div className="text-wrapper flex h-auto w-1/2 flex-col justify-center md:w-full md:text-center">
+            <h3 className="font-sub-heading text-4xl font-semibold">
+              Lorem ipsum dolor sit.
+            </h3>
+            <h4 className="my-6 font-body text-lg font-light">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Laboriosam, reiciendis.
+              Laboriosam, reiciendis. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Laboriosam, reiciendis.
             </h4>
           </div>
         </div>
         {/**
          * //!feature-2
          */}
-        <div className="feature feature-1 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
+        <div className="feature feature-2 flex w-full flex-row-reverse justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
           <div
             ref={pushRef}
-            className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center"
+            className="img-wrapper  flex h-auto w-1/2 justify-end md:w-full md:justify-center"
           >
             <div className="feature-img-container  sm:wfull w-4/6 md:w-4/6">
               <img
-                className=" aspect-square plain-blob h-full object-cover"
+                className=" plain-blob aspect-square h-full object-cover"
                 src="../assets/images/6.jpg"
                 alt="feature"
               />
             </div>
           </div>
 
-          <div className="text-wrapper h-auto w-1/2 md:w-full md:text-center">
-            <h3 className="text-2xl font-semibold">Lorem ipsum dolor sit.</h3>
-            <h4 className="my-6 text-lg">
+          <div className="text-wrapper flex h-auto w-1/2 flex-col justify-center  md:w-full md:text-center">
+            <h3 className="font-sub-heading text-4xl font-semibold">
+              Lorem ipsum dolor sit.
+            </h3>
+            <h4 className="my-6 font-body text-lg font-light">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Laboriosam, reiciendis.
+              Laboriosam, reiciendis. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Laboriosam, reiciendis.
             </h4>
           </div>
         </div>
         {/**
          * //!feature-3
          */}
-        <div className="feature feature-1 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
+        <div className="feature feature-3 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
           <div
             ref={pushRef}
             className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center"
           >
             <div className="feature-img-container sm:wfull w-4/6 md:w-4/6">
               <img
-                className="aspect-square plain-blob h-full object-cover"
+                className="plain-blob aspect-square h-full object-cover"
                 src="../assets/images/7.jpg"
                 alt="feature"
               />
             </div>
           </div>
 
-          <div className="text-wrapper h-auto w-1/2 md:w-full md:text-center">
-            <h3 className="text-2xl font-semibold">Lorem ipsum dolor sit.</h3>
-            <h4 className="my-6 text-lg">
+          <div className="text-wrapper flex h-auto w-1/2 flex-col justify-center  md:w-full md:text-center">
+            <h3 className="font-sub-heading text-4xl font-semibold">
+              Lorem ipsum dolor sit.
+            </h3>
+            <h4 className="my-6 font-body text-lg font-light">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Laboriosam, reiciendis.
+              Laboriosam, reiciendis. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Laboriosam, reiciendis.
             </h4>
           </div>
         </div>
         {/**
          * //!feature-4
          */}
-        <div className="feature feature-1 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
+        <div className="feature feature-4 flex w-full flex-row-reverse justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
           <div
             ref={pushRef}
-            className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center"
+            className="img-wrapper  flex h-auto w-1/2 justify-end md:w-full md:justify-center"
           >
             <div className="feature-img-container sm:wfull w-4/6 md:w-4/6">
               <img
-                className="aspect-square plain-blob h-full object-cover"
+                className="plain-blob aspect-square h-full object-cover"
                 src="../assets/images/11.jpg"
                 alt="feature"
               />
             </div>
           </div>
 
-          <div className="text-wrapper h-auto w-1/2 md:w-full md:text-center">
-            <h3 className="text-2xl font-semibold">Lorem ipsum dolor sit.</h3>
-            <h4 className="my-6 text-lg">
+          <div className="text-wrapper flex h-auto w-1/2 flex-col justify-center  md:w-full md:text-center">
+            <h3 className="font-sub-heading text-4xl font-semibold">
+              Lorem ipsum dolor sit.
+            </h3>
+            <h4 className="my-6 font-body text-lg font-light">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Laboriosam, reiciendis.
+              Laboriosam, reiciendis. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Laboriosam, reiciendis.
             </h4>
           </div>
         </div>

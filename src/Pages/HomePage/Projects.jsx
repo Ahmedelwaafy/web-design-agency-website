@@ -6,9 +6,26 @@ function Projects() {
   gsap.registerPlugin(ScrollTrigger);
 
   const app = useRef();
- 
+  const ref = useRef([]);
+  const pushRef = (el) => ref.current.push(el);
+
   useEffect(() => {
-   
+    let cursor = document.querySelector(".cursor");
+    let follower = document.querySelector(".cursor-follower");
+
+    let uniqueRefs = [...new Set(ref.current)];
+
+    uniqueRefs.map((ref) => {
+      ref.addEventListener("mouseenter", function (e) {
+        cursor.classList.add("active");
+        follower.classList.add("active");
+      });
+      ref.addEventListener("mouseleave", function (e) {
+        cursor.classList.remove("active");
+        follower.classList.remove("active");
+      });
+    });
+
     let ctx = gsap.context(() => {
       //! time line
       const tl = gsap.timeline({
@@ -27,8 +44,8 @@ function Projects() {
     return () => ctx.revert();
   }, []);
   return (
-    <section ref={app} className="width h-fit py-20">
-      <h2 className="mb-60 text-center text-3xl font-bold tracking-widest">
+    <section id="projects" ref={app} className="width h-fit pt-28">
+      <h2 className="mb-80 text-center text-3xl font-bold tracking-widest">
         Our Projects
       </h2>
 
@@ -36,99 +53,108 @@ function Projects() {
         {/**
          * //!--- project 1 ------
          */}
-        <div  className="project relative w-[350px] aspect-square md:w-[300px]">
+        <div className="project relative h-[450px] w-[350px] cursor-pointer border-2 border-secondary md:w-[300px]">
           <div className="project-content absolute"></div>
           <img
-            className="h-full w-full object-cover"
-            src="../assets/images/12.jpg"
+            ref={pushRef}
+            className="h-full w-full object-cover object-top transition-all duration-[5s] ease-in-out hover:object-bottom"
+            src="../assets/images/project-1.png"
             alt="project"
           />
         </div>
         {/**
          * //!--- project 1 ------
          */}
-        <div  className="project relative w-[350px] aspect-square md:w-[300px]">
+        <div className="project relative h-[450px] w-[350px] cursor-pointer border-2 border-secondary md:w-[300px]">
           <div className="project-content absolute"></div>
           <img
-            className="h-full w-full object-cover"
-            src="../assets/images/13.jpg"
+            ref={pushRef}
+            className="h-full w-full object-cover object-top transition-all duration-[5s] ease-in-out hover:object-bottom"
+            src="../assets/images/project-2.png"
             alt="project"
           />
         </div>
         {/**
          * //!--- project 1 ------
          */}
-        <div  className="project relative w-[350px] aspect-square md:w-[300px]">
+        <div className="project relative h-[450px] w-[350px] cursor-pointer border-2 border-secondary md:w-[300px]">
           <div className="project-content absolute"></div>
           <img
-            className="h-full w-full object-cover"
-            src="../assets/images/14.jpg"
+            ref={pushRef}
+            className="h-full w-full object-cover object-top transition-all duration-[5s] ease-in-out hover:object-bottom"
+            src="../assets/images/project-3.png"
             alt="project"
           />
         </div>
         {/**
          * //!--- project 1 ------
          */}
-        <div  className="project relative w-[350px] aspect-square md:w-[300px]">
+        <div className="project relative h-[450px] w-[350px] cursor-pointer border-2 border-secondary md:w-[300px]">
           <div className="project-content absolute"></div>
           <img
-            className="h-full w-full object-cover"
-            src="../assets/images/15.jpg"
+            ref={pushRef}
+            className="h-full w-full object-cover object-top transition-all duration-[5s] ease-in-out hover:object-bottom"
+            src="../assets/images/project-4.png"
             alt="project"
           />
         </div>
         {/**
          * //!--- project 1 ------
          */}
-        <div  className="project relative w-[350px] aspect-square md:w-[300px]">
+        <div className="project relative h-[450px] w-[350px] cursor-pointer border-2 border-secondary md:w-[300px]">
           <div className="project-content absolute"></div>
           <img
-            className="h-full w-full object-cover"
-            src="../assets/images/16.jpg"
+            ref={pushRef}
+            className="h-full w-full object-cover object-top transition-all duration-[5s] ease-in-out hover:object-bottom"
+            src="../assets/images/project-1.png"
             alt="project"
           />
         </div>
         {/**
          * //!--- project 1 ------
          */}
-        <div  className="project relative w-[350px] aspect-square md:w-[300px]">
+        <div className="project relative h-[450px] w-[350px] cursor-pointer border-2 border-secondary md:w-[300px]">
           <div className="project-content absolute"></div>
           <img
-            className="h-full w-full object-cover"
-            src="../assets/images/17.jpg"
+            ref={pushRef}
+            className="h-full w-full object-cover object-top transition-all duration-[5s] ease-in-out hover:object-bottom"
+            src="../assets/images/project-2.png"
             alt="project"
           />
         </div>
         {/**
          * //!--- project 1 ------
          */}
-        <div  className="project relative w-[350px] aspect-square md:w-[300px]">
+        <div className="project relative h-[450px] w-[350px] cursor-pointer border-2 border-secondary md:w-[300px]">
           <div className="project-content absolute"></div>
           <img
-            className="h-full w-full object-cover"
-            src="../assets/images/18.jpg"
+            ref={pushRef}
+            className="h-full w-full object-cover object-top transition-all duration-[5s] ease-in-out hover:object-bottom"
+            src="../assets/images/project-3.png"
             alt="project"
           />
         </div>
         {/**
          * //!--- project 1 ------
          */}
-        <div  className="project relative w-[350px] aspect-square md:w-[300px]">
+        <div className="project relative h-[450px] w-[350px] cursor-pointer border-2 border-secondary md:w-[300px]">
           <div className="project-content absolute"></div>
           <img
-            className="h-full w-full object-cover"
-            src="../assets/images/19.jpg"
+            ref={pushRef}
+            className="h-full w-full object-cover object-top transition-all duration-[5s] ease-in-out hover:object-bottom"
+            src="../assets/images/project-4.png"
             alt="project"
           />
         </div>
         {/**
          * //!--- project 1 ------
          */}
-        <div  className="project relative w-[350px] aspect-square md:w-[300px]">
+        <div className="project relative h-[450px] w-[350px] cursor-pointer border-2 border-secondary md:w-[300px]">
           <div className="project-content absolute"></div>
           <img
-            className="h-full w-full object-cover"
-            src="../assets/images/20.jpg"
+            ref={pushRef}
+            className="h-full w-full object-cover object-top transition-all duration-[5s] ease-in-out hover:object-bottom"
+            src="../assets/images/project-1.png"
             alt="project"
           />
         </div>

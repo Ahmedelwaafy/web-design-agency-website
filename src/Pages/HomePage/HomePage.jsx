@@ -7,13 +7,12 @@ import FAQ from './FAQ'
 function HomePage() {
   return (
     <section>
-      
-      <Hero/>
-      <WhyUs/>
-      <Projects/>
-      <Contact/>
+      <Hero />
+      <WhyUs />
+      <Projects />
+      <Contact />
     </section>
-  )
+  );
 }
 
 export default HomePage

@@ -108,17 +108,21 @@ function Contact() {
   }, []);
 
   return (
-    <section ref={app} className=" h-fit w-full bg-primary   py-20 md:h-fit">
-      <h2 className="mb-20 text-center text-3xl font-bold tracking-widest">
+    <section
+      id="contact"
+      ref={app}
+      className=" -mt-40 h-fit w-full bg-primary  py-28 md:h-fit"
+    >
+      <h2 className="mb-10 text-center text-3xl font-bold tracking-widest">
         Contact Us{" "}
       </h2>
 
-      <div className="contact-wrapper width bg- flex  h-full items-start justify-between md:flex-col md:items-center">
+      <div className="contact-wrapper width bg- flex  h-[510px] md:h-fit items-start justify-between md:flex-col md:items-center ">
         {/**
          * //!--- socials  ----
          */}
 
-        <div className="socials relative flex h-fit w-3/5 flex-col  items-center justify-center gap-16 bg- lg:w-1/2 lg:justify-center md:w-full ">
+        <div className="socials bg- relative flex h-full w-3/5  flex-col items-center justify-center gap-16 lg:w-1/2 lg:justify-center md:w-full ">
           <a href="#d" target="_blank" rel="noreferrer" className=" text">
             LinkedIn
           </a>
@@ -145,7 +149,7 @@ function Contact() {
               <g id="left-eye">
                 <circle
                   className="eye-outer"
-                  cx="350"
+                  cx="300"
                   cy="500"
                   r="150"
                   stroke="#1f0018"
@@ -154,7 +158,7 @@ function Contact() {
                 />
                 <circle
                   className="eye-inner"
-                  cx="450"
+                  cx="400"
                   cy="500"
                   r="40"
                   fill="#1f0018"
@@ -163,7 +167,7 @@ function Contact() {
               <g id="right-eye">
                 <circle
                   className="eye-outer"
-                  cx="660"
+                  cx="610"
                   cy="500"
                   r="150"
                   stroke="#1f0018"
@@ -172,7 +176,7 @@ function Contact() {
                 />
                 <circle
                   className="eye-inner"
-                  cx="760"
+                  cx="710"
                   cy="500"
                   r="40"
                   fill="#1f0018"
@@ -186,17 +190,19 @@ function Contact() {
          * //!--- form  ----
          */}
         <div className="contact-form flex h-fit w-2/5 justify-center  lg:w-1/2 md:w-full">
-          <form className="flex plain-blob h-fit w-96 flex-col items-center gap-9 border-2 border-text px-16 py-8 md:items-center">
-            <h2 className="text-2xl font-semibold mt-4">Send Us a Message</h2>
+          <form className="plain-blob flex h-fit w-96 flex-col items-center gap-9 border-2 border-text px-16 py-8 md:items-center">
+            <h2 className="mt-4 font-sub-heading text-[20px]">
+              Send Us a Message
+            </h2>
             <div className="input-box relative w-full">
               <input
                 required
-                className="relative w-full  border-b-2  border-b-text bg-transparent outline-none  transition-all duration-200 ease-out valid:border-b-accent focus:border-b-accent"
+                className="valid:text- relative w-full border-b-2 border-b-text bg-transparent  font-body text-lg font-light  outline-none transition-all duration-300 ease-in-out valid:border-b-bg focus:border-b-white focus:text-white"
                 id="name"
                 type="text"
               />
               <label
-                className="pointer-events-none  absolute left-0"
+                className="pointer-events-none absolute  left-0 font-body"
                 htmlFor="name"
               >
                 Name
@@ -205,7 +211,7 @@ function Contact() {
             <div className="input-box relative w-full">
               <input
                 required
-                className="relative w-full  border-b-2  border-b-text bg-transparent outline-none  transition-all duration-200 ease-out valid:border-b-accent focus:border-b-accent"
+                className="relative w-full  border-b-2  border-b-text bg-transparent font-body  font-light outline-none transition-all duration-300 ease-in-out valid:border-b-bg focus:border-b-white focus:text-white"
                 id="name"
                 type="text"
               />
@@ -213,14 +219,14 @@ function Contact() {
                 className="pointer-events-none  absolute left-0"
                 htmlFor="name"
               >
-                Name
+                Email
               </label>
             </div>
 
             <div className="input-box w-full">
               <textarea
                 required
-                className="px- w-full resize-none  border-2 border-text bg-transparent  py-2 outline-none transition-all duration-200 ease-out valid:border-accent focus:border-accent placeholder:text-text"
+                className="w-full resize-none border-2  border-text bg-transparent px-1  py-2 font-body font-light outline-none transition-all duration-200 ease-out placeholder:font-body placeholder:text-text valid:border-white focus:border-white focus:text-white"
                 name="message"
                 placeholder="Message..."
                 id="message"
@@ -228,7 +234,11 @@ function Contact() {
                 rows="5"
               ></textarea>
             </div>
-            <input className="bg-text text-white px-5 text-xl cursor-pointer duration-300 border-text border-2 hover:bg-transparent hover:text-text py-2" type="submit" value="Send" />
+            <input
+              className="cursor-pointer border-2 border-text bg-text px-5 py-2 text-lg text-white duration-300 hover:bg-transparent hover:text-text font-body active:scale-90"
+              type="submit"
+              value="Send"
+            />
           </form>
         </div>
       </div>

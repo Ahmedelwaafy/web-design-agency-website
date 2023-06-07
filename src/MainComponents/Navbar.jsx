@@ -6,9 +6,11 @@ import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 function Navbar() {
   const app = useRef();
-  
+  const [toggle, setToggle] = useState(false);
   useLayoutEffect(() => {
-    const openCloseMenuBtns =document.querySelectorAll(".close-menu , .open-menu , .menu-item")
+    const openCloseMenuBtns = document.querySelectorAll(
+      ".close-menu , .open-menu , .menu-item"
+    );
     let ctx = gsap.context(() => {
       //!header
       gsap.from(".logo , .open-menu", {
@@ -21,50 +23,70 @@ function Navbar() {
       });
 
       //!menu
-     const t1 = gsap.timeline({ paused: true });
-      t1
-        .to(".menu-fixed", {
-          left: 0,
-          duration: 1,
+      const t1 = gsap.timeline({ paused: true });
+      t1.to(".menu-fixed", {
+        left: 0,
+        duration: 1,
+        ease: "expo.inOut",
+      }).from(
+        ".menu-item",
+        {
+          y: 100,
+          duration: 0.8,
+          opacity: 0,
           ease: "expo.inOut",
-        })
-        .from(
-          ".menu-item",
-          {
-            y: 100,
-            duration: 0.8,
-            opacity: 0,
-            ease: "expo.inOut",
-            stagger: 0.1,
-          },
-          "-=0.4"
-        );
+          stagger: 0.1,
+        },
+        "-=0.4"
+      );
       t1.reverse();
-       openCloseMenuBtns.forEach((item) => {
-         return item.addEventListener("click", function () {
-           t1.reversed(!t1.reversed());
-           console.log("clicked");
-         });
-       });
+      openCloseMenuBtns.forEach((item) => {
+        return item.addEventListener("click", function () {
+          t1.reversed(!t1.reversed());
+          console.log("clicked");
+        });
+      });
     }, app);
 
     return () => ctx.revert();
   }, []);
 
- 
-
   return (
-    <section ref={app} className="h-20 w-full bg-secondary">
-      <nav className="width flex h-full items-center justify-between">
-        <h2 className=" logo text-2xl font-bold tracking-widest">OMATECH</h2>
-        <div className="open-menu ">
-          <FontAwesomeIcon className="cursor-pointer text-3xl" icon={faBars} />
+    <section
+      id="top"
+      ref={app}
+      className="fixed top-0 z-40 h-20 w-full bg-secondary"
+    >
+      <nav className="width flex h-full items-center justify-between ">
+        <a
+          href="#top"
+          className=" logo font-sub-heading text-2xl font-bold tracking-widest"
+        >
+          OMATECH
+        </a>
+
+        <div
+          onClick={() => setToggle(!toggle)}
+          className="menu-icon open-menu plain-blob border-2 border-text "
+        >
+          <input
+            className="menu-icon__cheeckbox"
+            checked={toggle}
+            type="checkbox"
+          />
+          <div>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </nav>
       <div className="menu-fixed fixed inset-0 -left-full z-50 h-screen w-full bg-primary px-14 py-9">
-        <div className="close-menu  text-end cursor-pointer">close</div>
         <ul className="menu-items flex flex-col items-start justify-start gap-14">
-          <Link to="/#home" className="menu-item group relative cursor-pointer">
+          <Link
+            onClick={() => setToggle(!toggle)}
+            to="/#home"
+            className="menu-item group relative cursor-pointer"
+          >
             <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0">
               Home
             </p>
@@ -80,6 +102,7 @@ function Navbar() {
             />
           </Link>
           <Link
+            onClick={() => setToggle(!toggle)}
             to="/#features"
             className="menu-item group relative cursor-pointer"
           >
@@ -99,6 +122,7 @@ function Navbar() {
             />
           </Link>
           <Link
+            onClick={() => setToggle(!toggle)}
             to="/#Projects"
             className="menu-item group relative cursor-pointer"
           >
@@ -117,7 +141,11 @@ function Navbar() {
               alt="img"
             />
           </Link>
-          <Link to="/#FAQ" className="menu-item group relative cursor-pointer">
+          <Link
+            onClick={() => setToggle(!toggle)}
+            to="/#FAQ"
+            className="menu-item group relative cursor-pointer"
+          >
             <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0">
               FAQ
             </p>
@@ -132,6 +160,7 @@ function Navbar() {
             />
           </Link>
           <Link
+            onClick={() => setToggle(!toggle)}
             to="/#Contact"
             className="menu-item group relative cursor-pointer"
           >
