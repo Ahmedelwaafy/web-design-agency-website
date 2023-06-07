@@ -2,7 +2,7 @@ import React from 'react'
 
 function FAQ() {
   return (
-    <section className="bg-secondary">
+    <section className="bg-white">
       FAQ
       <div className="eyes-wrapper aspect-square w-72 pl-1">
 

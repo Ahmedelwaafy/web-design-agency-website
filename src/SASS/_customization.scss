@@ -112,3 +112,36 @@
 .letter:nth-child(11) {
   transition-delay: 0.3s;
 }
+
+//!------ form inputs  --------
+
+.input-box {
+  label span {
+    position: relative;
+    display: inline-flex;
+    transition: 0.2s ease-in-out;
+  }
+
+  input:focus ~ label span,
+  input:valid ~ label span {
+    transform: translateY(-100%);
+  }
+}
+
+//!---- footer  -------
+
+.footer-auto-fit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  place-content: center;
+  justify-content: center;
+  @media screen and (max-width: 1024px) {
+    justify-items: center;
+  }
+}
+
+.grid-col {
+  width: 250px;
+}

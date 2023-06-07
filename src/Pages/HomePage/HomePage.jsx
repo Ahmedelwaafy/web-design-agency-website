@@ -12,7 +12,6 @@ function HomePage() {
       <WhyUs/>
       <Projects/>
       <Contact/>
-      <FAQ/>
     </section>
   )
 }

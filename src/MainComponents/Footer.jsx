@@ -10,34 +10,12 @@ function Footer() {
     >
       <div className="footer-container width footer-auto-fit ">
         <div className="grid-col">
-          <h2 className="text-4xl font-bold md:text-center">title</h2>
+          <h2 className=" logo text-2xl font-bold tracking-widest">OMATECh</h2>
           <p className="text-light/70 my-7">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat,
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat,
             eos.
           </p>
-          <div className="socials flex items-center gap-9 md:justify-center">
-            <img
-              className="w-12 cursor-pointer duration-300 hover:scale-110 active:scale-90"
-              src="../assets/whatsapp.svg"
-              alt=""
-            />
-            <img
-              className="w-[45px] cursor-pointer duration-300 hover:scale-110 active:scale-90"
-              src="../assets/facebook.svg"
-              alt=""
-            />
-            <img
-              className="w-12 cursor-pointer duration-300 hover:scale-110 active:scale-90"
-              src="../assets/instagram.svg"
-              alt=""
-            />
-            <img
-              className="w-12 cursor-pointer duration-300 hover:scale-110 active:scale-90"
-              src="../assets/twitter.svg"
-              alt=""
-            />
-          </div>
         </div>
         <div className="grid-col">
           <h3
@@ -45,9 +23,14 @@ function Footer() {
              font-bold
              "
           >
-            title{" "}
+            Company{" "}
           </h3>
-          <ul className="mt-10 flex flex-col items-center justify-center gap-7"></ul>
+          <ul className="mt-10 flex flex-col items-center justify-center gap-7">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+          </ul>
         </div>
         <div className="grid-col">
           <h3
@@ -55,9 +38,14 @@ function Footer() {
              font-bold
              "
           >
-            title{" "}
+            Projects{" "}
           </h3>
-          <ul className="mt-10 flex flex-col items-center justify-center gap-7"></ul>
+          <ul className="mt-10 flex flex-col items-center justify-center gap-7">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+          </ul>
         </div>
         <div className="grid-col">
           <h3
@@ -65,9 +53,14 @@ function Footer() {
              font-bold
              "
           >
-            title{" "}
+            About{" "}
           </h3>
-          <ul className="mt-10 flex flex-col items-center justify-center gap-7"></ul>
+          <ul className="mt-10 flex flex-col items-center justify-center gap-7">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+          </ul>
         </div>
       </div>
     </footer>
