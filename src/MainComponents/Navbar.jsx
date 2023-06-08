@@ -57,7 +57,7 @@ function Navbar() {
       ref={app}
       className="fixed top-0 z-40 h-20 w-full bg-secondary text-white"
     >
-      <nav className="width flex h-full items-center justify-between gap- md:justify-evenly ">
+      <nav className="width gap- flex h-full items-center justify-between md:justify-evenly ">
         <a
           href="#top"
           className=" logo font-sub-heading text-2xl font-bold tracking-widest"
@@ -82,9 +82,10 @@ function Navbar() {
       </nav>
       <div className="menu-fixed fixed inset-0 -left-full z-50 h-screen w-full overflow-hidden bg-primary px-14 py-9 md:px-4">
         <ul className="menu-items flex  w-5/6 flex-col items-start justify-start gap-14 ">
-          <Link
+          <a
+            href="#top"
             onClick={() => setToggle(!toggle)}
-            to="/#home"
+            //to="/#home"
             className="menu-item group relative cursor-pointer"
           >
             <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0 md:text-4xl">
@@ -100,10 +101,11 @@ function Navbar() {
               src="../assets/images/1.jpg"
               alt="img"
             />
-          </Link>
-          <Link
+          </a>
+          <a
+            href="#features"
             onClick={() => setToggle(!toggle)}
-            to="/#features"
+            //to="/#features"
             className="menu-item group relative cursor-pointer"
           >
             <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0 md:text-4xl">
@@ -120,10 +122,11 @@ function Navbar() {
               src="../assets/images/2.jpg"
               alt="img"
             />
-          </Link>
-          <Link
+          </a>
+          <a
+            href="#projects"
             onClick={() => setToggle(!toggle)}
-            to="/#Projects"
+            //to="/#Projects"
             className="menu-item group relative cursor-pointer"
           >
             <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0 md:text-4xl">
@@ -140,10 +143,11 @@ function Navbar() {
               src="../assets/images/3.jpg"
               alt="img"
             />
-          </Link>
-          <Link
+          </a>
+          <a
+            href="#FAQ"
             onClick={() => setToggle(!toggle)}
-            to="/#FAQ"
+            //to="/#FAQ"
             className="menu-item group relative cursor-pointer"
           >
             <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0 md:text-4xl">
@@ -158,10 +162,11 @@ function Navbar() {
               src="../assets/images/4.jpg"
               alt="img"
             />
-          </Link>
-          <Link
+          </a>
+          <a
+            href="#contact"
             onClick={() => setToggle(!toggle)}
-            to="/#Contact"
+            //to="/#Contact"
             className="menu-item group relative cursor-pointer"
           >
             <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0 md:text-4xl">
@@ -178,7 +183,7 @@ function Navbar() {
               src="../assets/images/1.jpg"
               alt="img"
             />
-          </Link>
+          </a>
         </ul>
       </div>
     </section>
