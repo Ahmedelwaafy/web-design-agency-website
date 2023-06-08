@@ -102,6 +102,18 @@ function Contact() {
         y: -300,
         scrub: true,
       });
+       gsap.to(".contact-title", {
+         scrollTrigger: {
+           trigger: ".contact-title",
+           start: "top bottom",
+           //scrub:true,
+           toggleActions: "restart none none reset",
+         },
+         duration: 1,
+         delay: 0.3,
+         y: 0,
+         opacity: 1,
+       });
     }, app);
 
     return () => ctx.revert();
@@ -111,13 +123,13 @@ function Contact() {
     <section
       id="contact"
       ref={app}
-      className=" -mt-40 h-fit w-full bg-primary  py-28 md:h-fit"
+      className=" -mt-40 h-fit w-full bg-accent py-28  text-text md:h-fit"
     >
-      <h2 className="mb-10 text-center text-3xl font-bold tracking-widest">
+      <h2 className="contact-title mb-10 translate-y-20 text-center text-3xl font-bold tracking-widest opacity-0">
         Contact Us{" "}
       </h2>
 
-      <div className="contact-wrapper width bg- flex  h-[510px] md:h-fit items-start justify-between md:flex-col md:items-center ">
+      <div className="contact-wrapper width bg- flex  h-[510px] items-start justify-between md:h-fit md:flex-col md:items-center ">
         {/**
          * //!--- socials  ----
          */}
@@ -197,7 +209,7 @@ function Contact() {
             <div className="input-box relative w-full">
               <input
                 required
-                className="valid:text- relative w-full border-b-2 border-b-text bg-transparent  font-body text-lg font-light  outline-none transition-all duration-300 ease-in-out valid:border-b-bg focus:border-b-white focus:text-white"
+                className="valid:text- relative w-full border-b-2 border-b-text bg-transparent  font-body text-lg font-light  outline-none transition-all duration-300 ease-in-out valid:border-b-bg focus:border-b-text focus:text-text"
                 id="name"
                 type="text"
               />
@@ -211,7 +223,7 @@ function Contact() {
             <div className="input-box relative w-full">
               <input
                 required
-                className="relative w-full  border-b-2  border-b-text bg-transparent font-body  font-light outline-none transition-all duration-300 ease-in-out valid:border-b-bg focus:border-b-white focus:text-white"
+                className="relative w-full  border-b-2  border-b-text bg-transparent font-body  font-light outline-none transition-all duration-300 ease-in-out valid:border-b-bg focus:border-b-text focus:text-text"
                 id="name"
                 type="text"
               />
@@ -226,7 +238,7 @@ function Contact() {
             <div className="input-box w-full">
               <textarea
                 required
-                className="w-full resize-none border-2  border-text bg-transparent px-1  py-2 font-body font-light outline-none transition-all duration-200 ease-out placeholder:font-body placeholder:text-text valid:border-white focus:border-white focus:text-white"
+                className="w-full resize-none border-2  border-text bg-transparent px-1  py-2 font-body font-light outline-none transition-all duration-200 ease-out placeholder:font-body placeholder:text-text valid:border-text focus:border-text focus:text-text"
                 name="message"
                 placeholder="Message..."
                 id="message"
@@ -235,7 +247,7 @@ function Contact() {
               ></textarea>
             </div>
             <input
-              className="cursor-pointer border-2 border-text bg-text px-5 py-2 text-lg text-white duration-300 hover:bg-transparent hover:text-text font-body active:scale-90"
+              className="cursor-pointer border-2 border-text bg-text px-5 py-2 font-body text-lg text-accent duration-300 hover:bg-transparent hover:text-text active:scale-90"
               type="submit"
               value="Send"
             />

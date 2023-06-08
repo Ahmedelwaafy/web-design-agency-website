@@ -220,10 +220,10 @@ function Hero() {
       <div className="hero-container width flex h-full items-center justify-between gap-24  md:h-fit md:flex-col md:justify-center md:py-20">
         <div className="hero-left flex  w-1/2 items-center justify-center   md:w-full">
           <div className="headings-wrapper  w-full flex-col md:text-center">
-            <h1 className="hero-headings font-sub-heading text-4xl font-bold">
+            <h1 className="hero-headings font-sub-heading text-4xl font-bold text-primary">
               Lorem ipsum dolor sit amet consectetur sed?
             </h1>
-            <h2 className="hero-headings mb-16 mt-10 font-body text-xl font-light ">
+            <h2 className="hero-headings mb-16 mt-10 font-body text-xl font-light text-secondary">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
               dolores distinctio nisi exercitationem iure em dolores distinctio
               nisi exercitationem iure temporibus.
@@ -237,7 +237,7 @@ function Hero() {
               </a>
               <a
                 href="#projects"
-                className="plain-blob bg-primary px-4 py-2 font-body"
+                className="plain-blob bg-accent px-4 py-2 font-body"
               >
                 See Projects{" "}
               </a>

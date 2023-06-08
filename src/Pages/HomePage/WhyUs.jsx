@@ -16,16 +16,18 @@ function WhyUs() {
       uniqueRefs.map((ref) => {
         const wrapper = ref.querySelector(".feature-img-container");
         const image = ref.querySelector(".feature-img-container img");
+        const textWrapper = ref.querySelector(".text-wrapper");
 
         const tl = gsap.timeline({
           scrollTrigger: {
-            trigger: ref,
+            trigger: wrapper,
             start: "top bottom",
             toggleActions: "restart none none reset",
           },
         });
         tl.to(wrapper, {
           duration: 2,
+          delay:1,
           ease: "power2",
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
         }).to(
@@ -33,10 +35,38 @@ function WhyUs() {
           {
             scale: 1,
             duration: 2,
+            delay:1
           },
           "<"
         );
+
+        const t2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: textWrapper,
+            start: "top bottom",
+            toggleActions: "restart none none reset",
+          },
+        });
+        t2.to(textWrapper, {
+          duration: 2,
+          delay:1,
+          ease: "power2",
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        });
         return;
+      });
+
+      gsap.to(".why-us-title", {
+        scrollTrigger: {
+          trigger: ".why-us-title",
+          start: "top bottom",
+          //scrub:true,
+          toggleActions: "restart none none reset",
+        },
+        duration: 1,
+        delay:0.3,
+        y: 0,
+        opacity: 1,
       });
     }, app);
 
@@ -44,7 +74,7 @@ function WhyUs() {
   }, []);
   return (
     <section ref={app} className="width h-fit py-20">
-      <h2 className="mb-20 text-center text-3xl font-bold tracking-widest">
+      <h2 className="why-us-title mb-20 translate-y-20 text-center text-3xl font-bold tracking-widest opacity-0">
         WhyUs
       </h2>
 
@@ -52,11 +82,11 @@ function WhyUs() {
         {/**
          * //!feature-1
          */}
-        <div className="feature feature-1 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
-          <div
-            ref={pushRef}
-            className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center"
-          >
+        <div
+          ref={pushRef}
+          className="feature feature-1 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start"
+        >
+          <div className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center">
             <div className="feature-img-container sm:wfull w-4/6 md:w-4/6">
               <img
                 className="plain-blob aspect-square h-full object-cover"
@@ -80,11 +110,11 @@ function WhyUs() {
         {/**
          * //!feature-2
          */}
-        <div className="feature feature-2 flex w-full flex-row-reverse justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
-          <div
-            ref={pushRef}
-            className="img-wrapper  flex h-auto w-1/2 justify-end md:w-full md:justify-center"
-          >
+        <div
+          ref={pushRef}
+          className="feature feature-2 flex w-full flex-row-reverse justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start"
+        >
+          <div className="img-wrapper  flex h-auto w-1/2 justify-end md:w-full md:justify-center">
             <div className="feature-img-container  sm:wfull w-4/6 md:w-4/6">
               <img
                 className=" plain-blob aspect-square h-full object-cover"
@@ -108,11 +138,11 @@ function WhyUs() {
         {/**
          * //!feature-3
          */}
-        <div className="feature feature-3 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
-          <div
-            ref={pushRef}
-            className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center"
-          >
+        <div
+          ref={pushRef}
+          className="feature feature-3 flex w-full justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start"
+        >
+          <div className="img-wrapper  flex h-auto w-1/2 md:w-full md:justify-center">
             <div className="feature-img-container sm:wfull w-4/6 md:w-4/6">
               <img
                 className="plain-blob aspect-square h-full object-cover"
@@ -136,11 +166,11 @@ function WhyUs() {
         {/**
          * //!feature-4
          */}
-        <div className="feature feature-4 flex w-full flex-row-reverse justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start">
-          <div
-            ref={pushRef}
-            className="img-wrapper  flex h-auto w-1/2 justify-end md:w-full md:justify-center"
-          >
+        <div
+          ref={pushRef}
+          className="feature feature-4 flex w-full flex-row-reverse justify-between gap-10 md:flex-col-reverse md:items-center md:justify-start"
+        >
+          <div className="img-wrapper  flex h-auto w-1/2 justify-end md:w-full md:justify-center">
             <div className="feature-img-container sm:wfull w-4/6 md:w-4/6">
               <img
                 className="plain-blob aspect-square h-full object-cover"

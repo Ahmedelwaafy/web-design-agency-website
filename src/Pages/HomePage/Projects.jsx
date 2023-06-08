@@ -39,13 +39,26 @@ function Projects() {
         y: -300,
         scrub: true,
       });
+
+      gsap.to(".projects-title", {
+        scrollTrigger: {
+          trigger: ".projects-title",
+          start: "top bottom",
+          //scrub:true,
+          toggleActions: "restart none none reset",
+        },
+        duration: 1,
+        delay: 0.3,
+        y: 0,
+        opacity: 1,
+      });
     }, app);
 
     return () => ctx.revert();
   }, []);
   return (
     <section id="projects" ref={app} className="width h-fit pt-28">
-      <h2 className="mb-80 text-center text-3xl font-bold tracking-widest">
+      <h2 className="projects-title mb-80 translate-y-20 text-center text-3xl font-bold tracking-widest opacity-0">
         Our Projects
       </h2>
 

@@ -55,9 +55,9 @@ function Navbar() {
     <section
       id="top"
       ref={app}
-      className="fixed top-0 z-40 h-20 w-full bg-secondary"
+      className="fixed top-0 z-40 h-20 w-full bg-secondary text-white"
     >
-      <nav className="width flex h-full items-center justify-between ">
+      <nav className="width flex h-full items-center justify-between gap- md:justify-evenly ">
         <a
           href="#top"
           className=" logo font-sub-heading text-2xl font-bold tracking-widest"
@@ -67,7 +67,7 @@ function Navbar() {
 
         <div
           onClick={() => setToggle(!toggle)}
-          className="menu-icon open-menu plain-blob border-2 border-text "
+          className="menu-icon open-menu plain-blob border-2 border-white "
         >
           <input
             className="menu-icon__cheeckbox"
@@ -75,19 +75,19 @@ function Navbar() {
             type="checkbox"
           />
           <div>
-            <span></span>
-            <span></span>
+            <span className=""></span>
+            <span className=""></span>
           </div>
         </div>
       </nav>
-      <div className="menu-fixed fixed inset-0 -left-full z-50 h-screen w-full bg-primary px-14 py-9">
-        <ul className="menu-items flex flex-col items-start justify-start gap-14">
+      <div className="menu-fixed fixed inset-0 -left-full z-50 h-screen w-full overflow-hidden bg-primary px-14 py-9 md:px-4">
+        <ul className="menu-items flex  w-5/6 flex-col items-start justify-start gap-14 ">
           <Link
             onClick={() => setToggle(!toggle)}
             to="/#home"
             className="menu-item group relative cursor-pointer"
           >
-            <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0">
+            <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0 md:text-4xl">
               Home
             </p>
             <span className="marquee-text pointer-events-none absolute left-0 top-0 translate-x-20 whitespace-nowrap text-3xl font-semibold italic opacity-0 transition-all duration-200 ease-in-out group-hover:-translate-x-20 group-hover:opacity-60">
@@ -106,7 +106,7 @@ function Navbar() {
             to="/#features"
             className="menu-item group relative cursor-pointer"
           >
-            <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0">
+            <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0 md:text-4xl">
               features
             </p>
             <span className="marquee-text pointer-events-none absolute left-0 top-0 translate-x-20 whitespace-nowrap text-3xl font-semibold italic opacity-0 transition-all duration-200 ease-in-out group-hover:-translate-x-20 group-hover:opacity-60">
@@ -126,7 +126,7 @@ function Navbar() {
             to="/#Projects"
             className="menu-item group relative cursor-pointer"
           >
-            <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0">
+            <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0 md:text-4xl">
               Projects
             </p>
             <span className="marquee-text pointer-events-none absolute left-0 top-0 translate-x-20 whitespace-nowrap text-3xl font-semibold italic opacity-0 transition-all duration-200 ease-in-out group-hover:-translate-x-20 group-hover:opacity-60">
@@ -146,7 +146,7 @@ function Navbar() {
             to="/#FAQ"
             className="menu-item group relative cursor-pointer"
           >
-            <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0">
+            <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0 md:text-4xl">
               FAQ
             </p>
             <span className="marquee-text pointer-events-none absolute left-0 top-0 translate-x-20 whitespace-nowrap text-3xl font-semibold italic opacity-0 transition-all duration-200 ease-in-out group-hover:-translate-x-20 group-hover:opacity-60">
@@ -164,7 +164,7 @@ function Navbar() {
             to="/#Contact"
             className="menu-item group relative cursor-pointer"
           >
-            <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0">
+            <p className="text-6xl transition-all duration-200 ease-in-out group-hover:opacity-0 md:text-4xl">
               Contact
             </p>
             <span className="marquee-text pointer-events-none absolute left-0 top-0 translate-x-20 whitespace-nowrap text-3xl font-semibold italic opacity-0 transition-all duration-200 ease-in-out group-hover:-translate-x-20 group-hover:opacity-60">
